@@ -1,0 +1,98 @@
+.card {
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 4px 8px 1px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 4px 8px 1px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 4px 8px 1px rgba(34, 60, 80, 0.2);
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  padding: 5px 20px 10px;
+}
+
+.card__date {
+  margin-top: auto;
+  align-self: end;
+}
+
+.card__title {
+  min-height: 56px;
+  max-height: 57px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Количество строк */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.button-panel .card__button:first-child {
+  border-radius: 0 0 0 30px;
+  border-right: 1px solid rgba(0, 0, 0, 0.178);
+}
+.button-panel .card__button:last-child {
+  border-radius: 0 0 30px 0;
+}
+
+.card__button_delete {
+  transition: 250ms;
+}
+
+.card__button_delete:hover {
+  background-color: #ff7875;
+}
+
+.card__button_edit {
+  transition: 250ms;
+}
+
+.card__button_edit:hover {
+  background-color: #bae7ff;
+}
+
+.card__popup {
+  width: 70%;
+  z-index: 999;
+  position: absolute;
+  top: -135px;
+  left: 15px;
+  background-color: #ffe9e8;
+  -webkit-box-shadow: 0px 4px 8px 1px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 4px 8px 1px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 4px 8px 1px rgba(34, 60, 80, 0.2);
+  border-radius: 20px;
+}
+
+.popup__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.popup__buttons button:first-child {
+  border-radius: 0 0 0 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.178);
+}
+.popup__buttons button:last-child {
+  border-radius: 0 0 20px 0;
+}
