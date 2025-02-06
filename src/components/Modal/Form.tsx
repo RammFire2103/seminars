@@ -11,6 +11,7 @@ import "./ModalForm.css";
 import { useDispatch } from "react-redux";
 import { changeModalState } from "../../store/modalSlice";
 
+//Тип для пропсов формы
 interface FromProps {
   card: CardType | undefined;
   children: ReactNode;
@@ -28,6 +29,7 @@ const Form: FC<FromProps> & {
   const dispatch = useDispatch();
   const messageBox = useRef<HTMLDivElement>(null);
 
+  //Запрос PUT для обновление записи на сервере
   const updatePost = async (id: string, updatedData: CardType) => {
     try {
       const response = await fetch(`http://localhost:3000/seminars/${id}`, {
@@ -49,11 +51,13 @@ const Form: FC<FromProps> & {
     }
   };
 
+  //функция для валидации введенных изменений
   const onSubmit = function (e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (card) {
       const formElements = e.target as HTMLFormElement;
 
+      //ПОлучение данных из формы
       const title = (
         formElements.elements.namedItem("title") as HTMLInputElement
       ).value;
@@ -68,6 +72,7 @@ const Form: FC<FromProps> & {
       const [year, month, day] = date.split("-");
       date = `${day}.${month}.${year}`;
 
+      //Валидация
       if (
         title === card.title &&
         description === card.description &&

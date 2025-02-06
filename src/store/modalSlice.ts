@@ -11,6 +11,7 @@ const modalSlice = createSlice({
   name: "modal",
   initialState,
   reducers: {
+    //Изменение стейта модального окна
     changeModalState: (state, action) => {
       state.show = !state.show;
       state.cardID = action.payload;

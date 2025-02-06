@@ -8,6 +8,7 @@ import ModalFrom from "./components/Modal/ModalForm";
 function App() {
   const dispatch = useDispatch();
 
+  //Запрос к json-серверу за получение семинаров
   useEffect(() => {
     fetch("http://localhost:3000/seminars", {
       method: "GET",
@@ -17,7 +18,7 @@ function App() {
     })
       .then((response) => response.json())
       .then((data) => {
-        dispatch(addCards(data));
+        dispatch(addCards(data)); //Добавление карт после запроса
       })
       .catch((error) => console.error(error));
   }, [dispatch]);

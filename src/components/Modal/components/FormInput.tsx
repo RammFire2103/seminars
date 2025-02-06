@@ -8,6 +8,7 @@ const FormInput: FC<{ type: string }> = ({ type }) => {
     throw new Error("CardContent must be used within a Form");
   }
 
+  //проверка типа intput
   switch (type) {
     case "title": {
       return (

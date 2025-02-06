@@ -10,11 +10,13 @@ const CardDeleteButton: FC = () => {
     throw new Error("CardContent must be used within a Card");
   }
 
+  //обработка нажатия на кнопку подтвержденя удаления
   const handleDeleteConfirm = () => {
     context.onDelete();
     setShowPopup(false);
   };
 
+  //обработка нажатия на кнопку отмены
   const handleCancel = () => {
     setShowPopup(false);
   };

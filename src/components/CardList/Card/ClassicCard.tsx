@@ -7,6 +7,7 @@ export interface ClassicCardProps {
   card: CardType;
 }
 
+//Разметка карточки семинара
 const ClassicCard: FC<ClassicCardProps> = ({ card }) => {
   return (
     <Card card={card}>

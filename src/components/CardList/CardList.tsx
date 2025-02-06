@@ -10,6 +10,7 @@ import { CardType } from "../../store/cardsSlice";
 import "./CardList.css";
 
 const CardList: FC = () => {
+  //Получение массива карт из стейта
   const cards = useSelector((state: AppState) => state.cards.cards);
 
   return (

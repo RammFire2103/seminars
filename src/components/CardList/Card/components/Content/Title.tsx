@@ -9,19 +9,6 @@ const CardTitle: FC = () => {
   }
 
   return <h3 className="card__title">{context.title}</h3>;
-
-  // return (
-  //   <ClampLines
-  //     text={context.title}
-  //     id="card__title"
-  //     lines={2}
-  //     ellipsis="…"
-  //     moreText="Expand"
-  //     lessText="Collapse"
-  //     className="card__title"
-  //     innerElement="h3"
-  //   />
-  // );
 };
 
 export default CardTitle;

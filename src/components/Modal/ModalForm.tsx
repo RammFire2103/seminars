@@ -4,6 +4,7 @@ import { AppState } from "../../store/store";
 import Form from "./Form";
 
 const ModalForm: FC = () => {
+  //Получение данных из стейта
   const cardID = useSelector((state: AppState) => state.modal.cardID);
 
   const selectItemById = (state: AppState, id: string | undefined) =>

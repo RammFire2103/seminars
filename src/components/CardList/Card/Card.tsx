@@ -43,10 +43,12 @@ const Card: FC<CardProps> & {
 } = ({ card, children }) => {
   const dispatch = useDispatch();
 
+  //Открытие модального окна при редактировании
   const onEdit = () => {
     dispatch(changeModalState(card.id));
   };
 
+  //Запрос DELETE для удаление семинара на json сервере
   const onDelete = () => {
     fetch(`http://localhost:3000/seminars/${card.id}`, {
       method: "DELETE",
